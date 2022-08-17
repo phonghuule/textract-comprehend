@@ -57,7 +57,7 @@ The first step is to use an [AWS CloudFormation](https://aws.amazon.com/cloudfo
 To upload your documents to your newly created S3 bucket in the above step, complete the following:
 
 1.  Click on the Amazon S3 Bucket URL you copied from the CloudFormation Output.
-2.  Download the example dataset `demo-data.zip` from the [GitHub repo](demo-data.zip). This dataset contains a variety of images that include forms, a scanned page with paragraphs, and a two-column document.
+2.  Download the example dataset [demo-data.zip](https://awsinnovatedata2022.s3.amazonaws.com/textract-comprehend/demo-data.zip). This dataset contains a variety of images that include forms, a scanned page with paragraphs, and a two-column document.
 3.  Unzip the data.
 4.  Upload the files in the demo-data folder to the Amazon S3 bucket starting with `document-search-blog-s3-`*<Random string>*.
 
