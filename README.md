@@ -67,7 +67,7 @@ After the upload completes, you can see four image files: Employment_application
 
 ![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2019/10/29/NLPTextractComprehend7.png)
 
-Uploading the data to S3 triggers a Lambda S3 event notification to invoke a Lambda function. You can find event triggers configured in your Amazon S3 bucket properties under Advanced settings-> Events. You will see a Lambda function starting with `document-search-blog-ComprehendKeyPhraseAnalysis-<Random string>`. This Lambda function performs the following:
+Uploading the data to S3 triggers a Lambda S3 event notification to invoke a Lambda function. You can find event triggers configured in your Amazon S3 bucket properties under ``Properties-> Event notifications``. You will see a Lambda function starting with `document-search-blog-ComprehendKeyPhraseAnalysis-<Random string>`. This Lambda function performs the following:
 
 -   Extracts text from images using Amazon Textract.
 -   Performs key phrase extraction using Amazon Comprehend.
