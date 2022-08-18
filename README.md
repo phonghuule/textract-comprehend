@@ -30,7 +30,7 @@ This solution uses serverless technologies and managed services to be scalable a
 -   [Amazon Textract](https://aws.amazon.com/textract/) -- Extracts text and data from scanned documents automatically.
 -   [Amazon Comprehend](https://aws.amazon.com/documentation/comprehend/) -- Uses ML to find insights and relationships in text.
 -   [Amazon OpenSearch](https://aws.amazon.com/opensearch-service/) with Kibana -- Searches and visualizes the information.
--   [Amazon Cognito](http://aws.amazon.com/cognito) -- Integrates with Amazon ES and authenticates user access to Kibana. For more information, see [Get started with Amazon Elasticsearch Service: Use Amazon Cognito for Kibana access control](https://aws.amazon.com/blogs/database/get-started-with-amazon-elasticsearch-service-use-amazon-cognito-for-kibana-access-control/).
+-   [Amazon Cognito](http://aws.amazon.com/cognito) -- Integrates with Amazon OpenSearch and authenticates user access to Kibana. For more information, see [Get started with Amazon Elasticsearch Service: Use Amazon Cognito for Kibana access control](https://aws.amazon.com/blogs/database/get-started-with-amazon-elasticsearch-service-use-amazon-cognito-for-kibana-access-control/).
 -   [Amazon S3](http://aws.amazon.com/s3) -- Stores your documents and allows for central management with fine-tuned access controls.
 -   [AWS Lambda](http://aws.amazon.com/lambda) -- Executes code in response to triggers such as changes in data, shifts in system state, or user actions. Because S3 can directly trigger a Lambda function, you can build a variety of real-time [serverless](https://aws.amazon.com/serverless/) data-processing systems.
 
@@ -71,7 +71,7 @@ Uploading the data to S3 triggers a Lambda S3 event notification to invoke a Lam
 
 -   Extracts text from images using Amazon Textract.
 -   Performs key phrase extraction using Amazon Comprehend.
--   Searches text using Amazon ES.
+-   Searches text using Amazon OpenSearch.
 
 The following code example extracts text from images using Amazon Textract:
 
@@ -104,13 +104,13 @@ keyphrase_response = comprehend.detect_key_phrases(Text=text, LanguageCode='en')
 detect_entity= comprehend.detect_entities(Text=text, LanguageCode='en')
 ```
 
-You can index the response received from Amazon Textract and Amazon Comprehend and load it into Amazon ES to create an NLP-powered search index. Refer to the below code:
+You can index the response received from Amazon Textract and Amazon Comprehend and load it into Amazon OpenSearch to create an NLP-powered search index. Refer to the below code:
 
 ```
- #Connection to Elasticsearch
+ #Connection to OpenSearch
 
         es=connectES()
-#Saving Index to Elastocsearch endpoint in primary lambda handler
+#Saving Index to OpenSearch endpoint in primary lambda handler
 
         es.index(index="document", doc_type="_doc", body=searchdata)
 ```
@@ -152,6 +152,15 @@ This moves the fields to the Selected Fields menu. Your Kibana dashboard formu
 To look at your original document, choose s3link.
 
 Note: You can also add forms and table to view and search tables and forms.
+
+## Clean Up
+Follow the below steps to cleanup your account to prevent any aditional charges:
+### Clean Up S3 Bucket
+Navigate to Amazon S3, look for bucket name document-search-s3-.... 
+Select the radio button next to the bucket, then click "Empty"
+Enter the text to confirm and delete the contents.
+### Delete CloudFormation Stack
+Navigate to [CloudFormation] and find the stack document-search and Delete
 
 
 ## Survey
