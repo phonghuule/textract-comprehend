@@ -1,8 +1,6 @@
 ## Building an NLP-powered search index with Amazon Textract and Amazon Comprehend
 
-This lab is provided as part of **[AWS Innovate Data Edition](https://aws.amazon.com/events/aws-innovate/data/)**.
-
-Click [here](https://github.com/phonghuule/aws-innovate-data-edition-2022) to explore the full list of hands-on labs
+This lab is provided as part of **[AWS Innovate Data And AI/ML Edition](https://aws.amazon.com/events/aws-innovate/apj/aiml-data/)**.
 
 ℹ️ You will run this lab in your own AWS account and running this lab will incur some costs. Please follow directions at the end of the lab to remove resources to avoid future costs.
 
@@ -160,5 +158,7 @@ Navigate to Amazon S3, look for bucket name document-search-s3-....
 Select the radio button next to the bucket, then click "Empty"
 Enter the text to confirm and delete the contents.
 ### Delete CloudFormation Stack
-Navigate to [CloudFormation] and find the stack document-search and Delete
+Navigate to [CloudFormation](https://aws.amazon.com/cloudformation/) and find the stack document-search and Delete
 
+## Survey
+Please help us to provide your feedback [here](https://amazonmr.au1.qualtrics.com/jfe/form/SV_0fhl0aCfOF1qjQO?Session=HOL02). Participants who complete the surveys from AWS Innovate Online Conference – Data and AI/ML Edition will receive a gift code for USD25 in AWS credits. AWS credits will be sent via email by 31 March, 2023.
