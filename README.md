@@ -160,5 +160,3 @@ Enter the text to confirm and delete the contents.
 ### Delete CloudFormation Stack
 Navigate to [CloudFormation](https://aws.amazon.com/cloudformation/) and find the stack document-search and Delete
 
-## Survey
-Please help us to provide your feedback [here](https://amazonmr.au1.qualtrics.com/jfe/form/SV_0fhl0aCfOF1qjQO?Session=HOL02). Participants who complete the surveys from AWS Innovate Online Conference – Data and AI/ML Edition will receive a gift code for USD25 in AWS credits. AWS credits will be sent via email by 31 March, 2023.
